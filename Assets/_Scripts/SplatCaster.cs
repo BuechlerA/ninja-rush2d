@@ -17,9 +17,7 @@ public class SplatCaster : MonoBehaviour
 
     public void CastSplat(Vector3 position)
     {
-        Debug.Log(position);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+        Ray ray = Camera.main.ScreenPointToRay(transform.position);
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity, layerMask);
 
         if (hit.collider != null)
@@ -29,14 +27,13 @@ public class SplatCaster : MonoBehaviour
             Splat splatScript = splat.GetComponent<Splat>();
 
             ParticleSystem particle = Instantiate(splatParticles, position, Quaternion.identity);
-            particle.Play();
+            //particle.Play();
 
-            Debug.Log(hit.transform.tag + hit.transform.name);
             Debug.DrawRay(position, hit.point, Color.red, 5f);
+            Debug.Log(hit.transform.name + " " + hit.transform.tag);
 
             if (hit.collider.gameObject.tag == "Background")
             {
-                
                 splatScript.Initialize(Splat.SplatLocation.Background);
             }
             else
@@ -44,5 +41,7 @@ public class SplatCaster : MonoBehaviour
                 splatScript.Initialize(Splat.SplatLocation.Foreground);
             }
         }
+
+        Destroy(gameObject, 5f);
     }
 }

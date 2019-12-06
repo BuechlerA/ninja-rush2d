@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DragIndicator : MonoBehaviour
 {
+    private GameManager gameManager;
 
     private Vector2 startPos;
     private Vector2 endPos;
@@ -12,29 +13,33 @@ public class DragIndicator : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         lr = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (gameManager.gameStates == GameStates.play)
         {
-            lr.enabled = true;
-            lr.positionCount = 2;
-            startPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            lr.SetPosition(0, startPos);
+            if (Input.GetMouseButtonDown(0))
+            {
+                lr.enabled = true;
+                lr.positionCount = 2;
+                startPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                lr.SetPosition(0, startPos);
 
-        }
-        if (Input.GetMouseButton(0))
-        {
-            endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            lr.SetPosition(1, endPos);
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            lr.positionCount = 0;
-            lr.enabled = true;
+            }
+            if (Input.GetMouseButton(0))
+            {
+                endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                lr.SetPosition(1, endPos);
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                lr.positionCount = 0;
+                lr.enabled = true;
+            }
         }
     }
 }

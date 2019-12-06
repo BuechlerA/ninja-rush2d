@@ -38,7 +38,7 @@ public class Splat : MonoBehaviour
     {
         int randomIndex = Random.Range(0, sprites.Length);
         spriteRenderer.sprite = sprites[randomIndex];
-        spriteRenderer.color = new Color(Random.Range(0.3f, 1f), Random.Range(0.1f, 0.2f), 0f, 1f);
+        spriteRenderer.color = new Color(Random.Range(0.3f, 1f), Random.Range(0.1f, 0.2f), Random.Range(0.1f, 0.3f), 1f);
 
         float value = Random.Range(0f, 1f);
         if (value > 0.5f)
