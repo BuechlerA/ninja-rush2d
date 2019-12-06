@@ -15,6 +15,7 @@ public class EnemyBehaviour : MonoBehaviour
     void Die()
     {
         Camera.main.GetComponent<RipplePostProcessor>().RippleEffect(transform.position);
+        GetComponent<SplatCaster>().CastSplat(transform.position);
         Destroy(gameObject);
     }
 

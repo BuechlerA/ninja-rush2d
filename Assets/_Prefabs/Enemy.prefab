@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 539546673108292630}
   - component: {fileID: 539546673108292631}
   - component: {fileID: 539546673108292840}
+  - component: {fileID: 6306071523578939905}
   - component: {fileID: 539546673108292629}
   m_Layer: 0
   m_Name: Enemy
@@ -95,6 +96,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949f7acc831980047963175afa83b63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6306071523578939905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539546673108292841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44317d7e7dbb1604dbe61af1bbb3e27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splatParticles: {fileID: 6311902302767933138, guid: c7d02b7fa96e3db408865bc1f223c7a1,
+    type: 3}
+  splatPrefab: {fileID: 6978857349401776733, guid: 6b0e511cf7a46634ea932276f30fa7ed,
+    type: 3}
+  splatHolder: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!61 &539546673108292629
 BoxCollider2D:
   m_ObjectHideFlags: 0

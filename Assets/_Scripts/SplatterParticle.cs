@@ -12,6 +12,7 @@ public class SplatterParticle : MonoBehaviour
     private void Start()
     {
         splatterParticle = GetComponent<ParticleSystem>();
+        splatHolder = GameObject.Find("SplatHolder").transform;
     }
 
     private void OnParticleCollision(GameObject other)
@@ -25,7 +26,7 @@ public class SplatterParticle : MonoBehaviour
             GameObject splat = Instantiate(splatPrefab, collisionEvents[i].intersection, Quaternion.identity) as GameObject;
             splat.transform.SetParent(splatHolder, true);
             Splat splatScript = splat.GetComponent<Splat>();
-            splatScript.Initialize(splat.SplatLocation.Foreground);
+            splatScript.Initialize(Splat.SplatLocation.Foreground);
         }
     }
 }
