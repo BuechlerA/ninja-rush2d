@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStates.dead:
                 gameStates = GameStates.dead;
+                guiManager.GameOver();
                 break;
             default:
                 break;

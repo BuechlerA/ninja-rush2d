@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guiManager: {fileID: 0}
-  gameStates: 0
+  gameStates: 1
 --- !u!114 &6000146084446351449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,3 +87,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ac721f1803cbe4ead4599f4b2fb676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTimeSlow: 0

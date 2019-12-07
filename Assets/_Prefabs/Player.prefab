@@ -260,6 +260,7 @@ MonoBehaviour:
   currentSlowMoEnergy: 0
   maxSlowMoEnergy: 1
   slowMoEnergyMagnitude: 0
+  depleteSpeed: 3.5
   regenSpeed: 0.3
 --- !u!1 &6735416729917410208
 GameObject:
@@ -361,9 +362,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 12
-  m_LinearDrag: 0.8
-  m_AngularDrag: 0.05
+  m_Mass: 20
+  m_LinearDrag: 1.2
+  m_AngularDrag: 0.4
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
