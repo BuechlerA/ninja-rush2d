@@ -11,15 +11,25 @@ public class DragIndicator : MonoBehaviour
 
     private LineRenderer lr;
 
+    [SerializeField]
+    private Color[] colors;
+
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         lr = GetComponent<LineRenderer>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.Find("Player") != null)
+        {
+            int colorIndex = GameObject.Find("Player").GetComponent<PlayerBehaviour>().jumpCount;
+            lr.startColor = colors[colorIndex];
+        }
+
         if (gameManager.gameStates == GameStates.play)
         {
             if (Input.GetMouseButtonDown(0))

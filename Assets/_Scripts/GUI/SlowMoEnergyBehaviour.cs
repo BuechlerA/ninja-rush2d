@@ -8,7 +8,7 @@ public class SlowMoEnergyBehaviour : MonoBehaviour
     private Transform player;
 
     private TimeManager timeManager;
-
+    [SerializeField]
     private SpriteRenderer sprite;
 
     [SerializeField]
@@ -25,7 +25,7 @@ public class SlowMoEnergyBehaviour : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         timeManager = GameObject.Find("GameManager").GetComponent<TimeManager>();
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
         currentSlowMoEnergy = maxSlowMoEnergy;
     }
 

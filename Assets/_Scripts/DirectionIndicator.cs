@@ -26,6 +26,8 @@ public class DirectionIndicator : MonoBehaviour
             arrow.SetActive(true);
             IndicateDirection();
         }
+
+        
     }
 
     public void IndicateDirection()

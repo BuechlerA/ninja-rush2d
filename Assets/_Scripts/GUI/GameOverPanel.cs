@@ -6,7 +6,7 @@ public class GameOverPanel : MonoBehaviour
 {
     public void OpenPanel()
     {
-        LeanTween.moveX(gameObject, 550f, 0.5f).easeMethod();
+        LeanTween.moveX(gameObject, 80f, 0.5f).setEaseOutBounce();
         
     }
 }
