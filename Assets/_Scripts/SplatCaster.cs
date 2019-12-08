@@ -30,7 +30,6 @@ public class SplatCaster : MonoBehaviour
             //particle.Play();
 
             Debug.DrawRay(position, hit.point, Color.red, 5f);
-            Debug.Log(hit.transform.name + " " + hit.transform.tag);
 
             if (hit.collider.gameObject.tag == "Background")
             {

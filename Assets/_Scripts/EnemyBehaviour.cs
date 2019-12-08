@@ -15,9 +15,10 @@ public class EnemyBehaviour : MonoBehaviour
     }
 
     private void Die()
-    {     
-        Vector2 curPos = transform.position;
+    {
+        GameObject.Find("GameManager").GetComponent<GameManager>().AddScore();
 
+        Vector2 curPos = transform.position;
         GameObject splatCast = Instantiate(splatCaster, curPos, Quaternion.identity) as GameObject;
         splatCast.GetComponent<SplatCaster>().CastSplat(curPos);
         Camera.main.GetComponent<RipplePostProcessor>().RippleEffect(transform.position);
@@ -28,10 +29,5 @@ public class EnemyBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Die();
-        //if (collision.gameObject.name == "Player")
-        //{
-        //    //health--;
-        //    Die();
-        //}
     }
 }
