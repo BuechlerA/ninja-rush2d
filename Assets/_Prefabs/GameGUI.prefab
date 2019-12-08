@@ -1044,8 +1044,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -302, y: 0}
-  m_SizeDelta: {x: -56.5, y: -184.91}
+  m_AnchoredPosition: {x: -300, y: 0}
+  m_SizeDelta: {x: -56.5, y: -403.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2000899580108646081
 CanvasRenderer:
@@ -1095,6 +1095,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301fd7881832ff048bf399a25f91efa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveAmount: 450
+  gameOverStrings:
+  - You Are Dead
+  - BIG OOF
+  - OH NO!
+  - you are have dead
+  - my bad
 --- !u!1 &7160463098832817476
 GameObject:
   m_ObjectHideFlags: 0

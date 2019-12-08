@@ -40,6 +40,11 @@ public class PlayerBehaviour : MonoBehaviour
         {
             jumpCount = 0;
         }
+        if (GameObject.Find("GameManager").GetComponent<TimeManager>().isTimeSlow && !isGrounded)
+        {
+            Invoke("SpawnGhosts", 0.01f);
+            
+        }
     }
 
     [ContextMenu("PlayerDie")]

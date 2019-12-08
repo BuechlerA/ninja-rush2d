@@ -60,7 +60,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 9.42
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RippleMaterial: {fileID: 2100000, guid: e0942bdb8260b294c92708fc84a8747c, type: 2}
-  MaxAmount: 50
+  MaxAmount: 55
   Friction: 0.9

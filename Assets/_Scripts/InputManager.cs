@@ -35,7 +35,10 @@ public class InputManager : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 GetComponent<TimeManager>().UnSlowMo();
-                player.GetComponent<PlayerBehaviour>().ApplyForce(CalculateJumpVector(touchOne, touchTwo));
+                if (directionVector.magnitude > 0.2f)
+                {
+                    player.GetComponent<PlayerBehaviour>().ApplyForce(CalculateJumpVector(touchOne, touchTwo));
+                }
             }
         }
     }
