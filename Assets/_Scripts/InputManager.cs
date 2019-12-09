@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private GameManager gameManager;
+    public GameManager gameManager;
     private GameObject player;
 
     public Vector2 touchOne;

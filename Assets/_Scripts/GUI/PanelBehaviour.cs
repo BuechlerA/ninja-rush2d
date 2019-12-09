@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class PanelBehaviour : MonoBehaviour
 {
-    private Text textMessage;
+    public Text textMessage;
     public Vector3 scaleAmount;
 
-    public ScriptableObject textMessages;
+    public Messages messages;
 
     public virtual void Start()
     {
         gameObject.transform.localScale = new Vector3(0f, 0f, 0f);
-        textMessage = GameObject.Find("GameOverMessage").GetComponent<Text>();
     }
 
     public virtual void OpenPanel()

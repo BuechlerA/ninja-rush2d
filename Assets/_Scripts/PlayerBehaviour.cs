@@ -69,7 +69,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
-        rb.velocity = new Vector2(0f, 0f);
+        //rb.velocity = new Vector2(0f, 0f);
         if (collision.gameObject.layer == 10)
         {
             PlayerDie();

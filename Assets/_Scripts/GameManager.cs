@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public int gameScore;
 
+    public int enemyCount;
+
     void Start()
     {
         Screen.orientation = ScreenOrientation.Portrait;
@@ -16,12 +18,29 @@ public class GameManager : MonoBehaviour
         guiManager = GetComponent<GUIManager>();
 
         gameScore = 0;
+
+        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+    }
+
+    private void Update()
+    {
+        if (gameScore == enemyCount && gameStates == GameStates.play)
+        {
+            LevelWin();
+        }
     }
 
     public void AddScore()
     {
         gameScore++;
         GameObject.Find("ScorePanel").GetComponent<ScorePanel>().SetScoreText(gameScore);
+    }
+
+    public void LevelWin()
+    {
+        SetState(GameStates.menu);
+        GameObject.Find("TimerPanel").GetComponent<Timer>().isFinished = true;
+        GameObject.Find("WinPanel").GetComponent<WinPanel>().OpenPanel();
     }
 
     public void SetState(GameStates state)

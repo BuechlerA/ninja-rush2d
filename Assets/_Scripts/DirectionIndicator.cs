@@ -16,18 +16,19 @@ public class DirectionIndicator : MonoBehaviour
 
     private void Update()
     {
-        if(!Input.GetMouseButton(0))
+        if (inputManager.gameManager.gameStates == GameStates.play)
         {
-            arrow.transform.localScale = new Vector3(0, 0, 0);
-            arrow.SetActive(false);
+            if(!Input.GetMouseButton(0))
+            {
+                arrow.transform.localScale = new Vector3(0, 0, 0);
+                arrow.SetActive(false);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                arrow.SetActive(true);
+                IndicateDirection();
+            } 
         }
-        if (Input.GetMouseButton(0))
-        {
-            arrow.SetActive(true);
-            IndicateDirection();
-        }
-
-        
     }
 
     public void IndicateDirection()
