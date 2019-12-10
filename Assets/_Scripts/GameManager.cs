@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameStates.dead:
                 gameStates = GameStates.dead;
+                GetComponent<TimeManager>().UnSlowMo();
                 guiManager.GameOver();
                 break;
             default:
