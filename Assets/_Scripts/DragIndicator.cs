@@ -27,7 +27,10 @@ public class DragIndicator : MonoBehaviour
         if (GameObject.Find("Player") != null)
         {
             int colorIndex = GameObject.Find("Player").GetComponent<PlayerBehaviour>().jumpCount;
-            lr.startColor = colors[colorIndex];
+            if (colorIndex < colors.Length)
+            {
+                lr.startColor = colors[colorIndex];
+            }
         }
 
         if (gameManager.gameStates == GameStates.play)

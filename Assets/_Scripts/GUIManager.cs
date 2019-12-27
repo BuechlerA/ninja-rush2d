@@ -11,15 +11,20 @@ public class GUIManager : MonoBehaviour
 
     private GameOverPanel gameOverPanel;
 
+    private Scene currentScene;
+
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
         gameOverPanel = GameObject.Find("GameGUI").GetComponentInChildren<GameOverPanel>();
+
+        currentScene = SceneManager.GetActiveScene();
+        Debug.Log(currentScene.ToString() + currentScene.buildIndex);
     }
 
     public void RestartButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(currentScene.buildIndex);
     }
 
     public void GameOver()

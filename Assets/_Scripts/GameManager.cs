@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     public void LevelWin()
     {
-        SetState(GameStates.menu);
+        SetState(GameStates.win);
         GameObject.Find("TimerPanel").GetComponent<Timer>().isFinished = true;
         GameObject.Find("WinPanel").GetComponent<WinPanel>().OpenPanel();
     }
@@ -53,7 +53,14 @@ public class GameManager : MonoBehaviour
             case GameStates.play:
                 gameStates = GameStates.play;
                 break;
+            case GameStates.win:
+                gameStates = GameStates.win;
+                break;
             case GameStates.dead:
+                if (gameStates == GameStates.win)
+                {
+                    return;
+                }
                 gameStates = GameStates.dead;
                 GetComponent<TimeManager>().UnSlowMo();
                 guiManager.GameOver();

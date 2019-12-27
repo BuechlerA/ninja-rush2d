@@ -2800,26 +2800,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 431144224}
-    - target: {fileID: 2090094737793556914, guid: ccd1f9a2c01298b47b5d8be46762af92,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Your Time: 00,00'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090094737793556914, guid: ccd1f9a2c01298b47b5d8be46762af92,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090094737793556914, guid: ccd1f9a2c01298b47b5d8be46762af92,
-        type: 3}
-      propertyPath: m_FontData.m_AlignByGeometry
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2090094737793556914, guid: ccd1f9a2c01298b47b5d8be46762af92,
-        type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3525835793822070369, guid: ccd1f9a2c01298b47b5d8be46762af92,
         type: 3}
       propertyPath: m_LocalPosition.x
